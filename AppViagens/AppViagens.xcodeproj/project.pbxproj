@@ -13,6 +13,8 @@
 		24BE6572286CA652006464A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BE6570286CA652006464A3 /* Main.storyboard */; };
 		24BE6574286CA655006464A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24BE6573286CA655006464A3 /* Assets.xcassets */; };
 		24BE6577286CA655006464A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BE6575286CA655006464A3 /* LaunchScreen.storyboard */; };
+		24BE657F286CB057006464A3 /* HomeHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24BE657E286CB057006464A3 /* HomeHeader.xib */; };
+		24BE6581286CB2AE006464A3 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE6580286CB2AE006464A3 /* HomeHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		24BE6573286CA655006464A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24BE6576286CA655006464A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24BE6578286CA655006464A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24BE657E286CB057006464A3 /* HomeHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeader.xib; sourceTree = "<group>"; };
+		24BE6580286CB2AE006464A3 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				24BE6573286CA655006464A3 /* Assets.xcassets */,
 				24BE6575286CA655006464A3 /* LaunchScreen.storyboard */,
 				24BE6578286CA655006464A3 /* Info.plist */,
+				24BE657E286CB057006464A3 /* HomeHeader.xib */,
+				24BE6580286CB2AE006464A3 /* HomeHeader.swift */,
 			);
 			path = AppViagens;
 			sourceTree = "<group>";
@@ -126,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BE6577286CA655006464A3 /* LaunchScreen.storyboard in Resources */,
+				24BE657F286CB057006464A3 /* HomeHeader.xib in Resources */,
 				24BE6574286CA655006464A3 /* Assets.xcassets in Resources */,
 				24BE6572286CA652006464A3 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BE656F286CA652006464A3 /* ViewController.swift in Sources */,
+				24BE6581286CB2AE006464A3 /* HomeHeader.swift in Sources */,
 				24BE656B286CA652006464A3 /* AppDelegate.swift in Sources */,
 				24BE656D286CA652006464A3 /* SceneDelegate.swift in Sources */,
 			);
