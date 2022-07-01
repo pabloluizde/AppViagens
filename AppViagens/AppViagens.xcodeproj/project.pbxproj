@@ -41,6 +41,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2415D4FE286DF633004BDCC4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				24BE656A286CA652006464A3 /* AppDelegate.swift */,
+				24BE656C286CA652006464A3 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2415D4FF286DF679004BDCC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2415D500286DF685004BDCC4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2415D501286DF6BD004BDCC4 /* Header */,
+				24BE656E286CA652006464A3 /* ViewController.swift */,
+				24BE6570286CA652006464A3 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2415D501286DF6BD004BDCC4 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				24BE657E286CB057006464A3 /* HomeHeader.xib */,
+				24BE6580286CB2AE006464A3 /* HomeHeader.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		2415D502286DF6EC004BDCC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		24BE655E286CA652006464A3 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +102,13 @@
 		24BE6569286CA652006464A3 /* AppViagens */ = {
 			isa = PBXGroup;
 			children = (
-				24BE656A286CA652006464A3 /* AppDelegate.swift */,
-				24BE656C286CA652006464A3 /* SceneDelegate.swift */,
-				24BE656E286CA652006464A3 /* ViewController.swift */,
-				24BE6570286CA652006464A3 /* Main.storyboard */,
+				2415D4FE286DF633004BDCC4 /* AppDelegate */,
+				2415D4FF286DF679004BDCC4 /* Model */,
+				2415D500286DF685004BDCC4 /* View */,
+				2415D502286DF6EC004BDCC4 /* ViewModel */,
 				24BE6573286CA655006464A3 /* Assets.xcassets */,
 				24BE6575286CA655006464A3 /* LaunchScreen.storyboard */,
 				24BE6578286CA655006464A3 /* Info.plist */,
-				24BE657E286CB057006464A3 /* HomeHeader.xib */,
-				24BE6580286CB2AE006464A3 /* HomeHeader.swift */,
 			);
 			path = AppViagens;
 			sourceTree = "<group>";
