@@ -15,11 +15,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="prp-aU-GQO">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                    <rect key="frame" x="-293" y="0.0" width="1000" height="250"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Viagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-Gy-N7a">
-                            <rect key="frame" x="25" y="34" width="90" height="39"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viagens" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YP-Gy-N7a">
+                            <rect key="frame" x="316" y="48" width="85.5" height="32.5"/>
                             <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="23"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -27,6 +26,8 @@
                     </subviews>
                     <color key="backgroundColor" red="0.1176470588" green="0.23137254900000001" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="1YP-Gy-N7a" firstAttribute="top" secondItem="prp-aU-GQO" secondAttribute="top" constant="48" id="Rf7-Bf-19V"/>
+                        <constraint firstAttribute="width" constant="1000" id="mUz-3O-aic"/>
                         <constraint firstAttribute="height" constant="250" id="zWC-H0-Pqs"/>
                     </constraints>
                 </view>
@@ -80,16 +81,17 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="prp-aU-GQO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="8pD-zc-hNU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gNc-0q-xkz" secondAttribute="trailing" constant="19" id="KXR-Uv-FVr"/>
                 <constraint firstItem="gNc-0q-xkz" firstAttribute="bottom" secondItem="prp-aU-GQO" secondAttribute="bottom" constant="10" id="Mqr-Xa-s99"/>
-                <constraint firstItem="prp-aU-GQO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bQl-8y-Ixj"/>
+                <constraint firstItem="1YP-Gy-N7a" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="23" id="fcQ-de-VmI"/>
                 <constraint firstItem="gNc-0q-xkz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="lkQ-T2-4ts"/>
-                <constraint firstItem="prp-aU-GQO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o3I-8f-74g"/>
                 <constraint firstItem="prp-aU-GQO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sMc-mK-JYQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="bannerImage" destination="8UW-5h-vQz" id="VoQ-79-Ykv"/>
+                <outlet property="bannerView" destination="gNc-0q-xkz" id="zjs-AZ-thV"/>
                 <outlet property="headerView" destination="prp-aU-GQO" id="KZD-ft-39O"/>
                 <outlet property="tituloLabel" destination="1YP-Gy-N7a" id="DkP-Ir-hjK"/>
             </connections>
