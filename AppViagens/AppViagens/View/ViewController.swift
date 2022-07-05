@@ -30,15 +30,23 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return sessaoDeViagens?[section].numbersLines ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cellViagem = tableView.dequeueReusableCell(withIdentifier: "CellTableViewCell") as? CellTableViewCell else {
             fatalError("erro to create Cell")
         }
+        let viewModel = sessaoDeViagens?[indexPath.section]
         
-        return cellViagem
+        switch viewModel?.type {
+        case .destaques:
+            cellViagem.configCell(viewModel?.viagens[indexPath.row])
+            return cellViagem
+        default:
+            return UITableViewCell()
+    
+        }
     }
 }
 

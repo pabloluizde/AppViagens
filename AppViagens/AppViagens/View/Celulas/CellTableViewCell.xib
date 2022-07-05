@@ -68,6 +68,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cancelamento gratis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-jh-4pw">
+                                <rect key="frame" x="10" y="370" width="96" height="14"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="10"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
@@ -80,6 +86,7 @@
                             <constraint firstItem="lYv-MT-8Sf" firstAttribute="leading" secondItem="qLj-7D-pnU" secondAttribute="trailing" constant="3" id="OKW-Ho-X8f"/>
                             <constraint firstItem="dfb-Ad-zu9" firstAttribute="leading" secondItem="kaI-wE-53G" secondAttribute="leading" constant="10" id="Pcb-eT-Ofw"/>
                             <constraint firstAttribute="trailing" secondItem="3NS-hQ-eZe" secondAttribute="trailing" id="Sbp-Om-IKK"/>
+                            <constraint firstItem="VWz-jh-4pw" firstAttribute="leading" secondItem="kaI-wE-53G" secondAttribute="leading" constant="10" id="Uvd-fO-bGC"/>
                             <constraint firstItem="5wU-7V-kkq" firstAttribute="leading" secondItem="kaI-wE-53G" secondAttribute="leading" constant="10" id="XQ1-92-qeI"/>
                             <constraint firstItem="qLj-7D-pnU" firstAttribute="top" secondItem="5wU-7V-kkq" secondAttribute="bottom" constant="15" id="Yla-Dn-6jR"/>
                             <constraint firstItem="qLj-7D-pnU" firstAttribute="leading" secondItem="kaI-wE-53G" secondAttribute="leading" constant="10" id="Zad-GH-aYu"/>
@@ -91,6 +98,7 @@
                             <constraint firstItem="SUz-E8-6Kc" firstAttribute="top" secondItem="4Li-Hz-AnU" secondAttribute="bottom" constant="15" id="nVz-fJ-aIm"/>
                             <constraint firstItem="3NS-hQ-eZe" firstAttribute="top" secondItem="kaI-wE-53G" secondAttribute="top" id="oUz-MQ-gFo"/>
                             <constraint firstAttribute="trailing" secondItem="dfb-Ad-zu9" secondAttribute="trailing" constant="10" id="tP1-NI-95E"/>
+                            <constraint firstItem="VWz-jh-4pw" firstAttribute="top" secondItem="qLj-7D-pnU" secondAttribute="bottom" constant="10" id="vOb-sg-RFU"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -102,6 +110,16 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backgroundViewCell" destination="3NS-hQ-eZe" id="57h-mf-PRJ"/>
+                <outlet property="daysTravel" destination="SUz-E8-6Kc" id="Zbm-gs-Skv"/>
+                <outlet property="imageTravel" destination="3NS-hQ-eZe" id="p7o-BW-Euu"/>
+                <outlet property="priceDiscountTravel" destination="qLj-7D-pnU" id="o2T-SJ-5VR"/>
+                <outlet property="priceTotalTravel" destination="goi-yX-vub" id="PmY-eu-Voe"/>
+                <outlet property="statsTravel" destination="VWz-jh-4pw" id="6aw-eg-8Wa"/>
+                <outlet property="subtileTravel" destination="4Li-Hz-AnU" id="KNL-er-SJB"/>
+                <outlet property="titleTravel" destination="dfb-Ad-zu9" id="7P3-Qy-fsr"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </tableViewCell>
     </objects>
@@ -109,6 +127,9 @@
         <image name="cancun-internacional" width="1280" height="778"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
