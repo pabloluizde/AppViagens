@@ -102,6 +102,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 <constraints>
                     <constraint firstItem="kaI-wE-53G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="5cD-g5-Kr5"/>
                     <constraint firstAttribute="trailing" secondItem="kaI-wE-53G" secondAttribute="trailing" constant="10" id="869-do-8FD"/>
