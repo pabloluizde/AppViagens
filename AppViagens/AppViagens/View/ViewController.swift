@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     func configTableView() {
         viagensTableView.register(UINib(nibName: "CellTableViewCell", bundle: nil), forCellReuseIdentifier: "CellTableViewCell")
+        viagensTableView.register(UINib(nibName: "OfertTableViewCell", bundle: nil), forCellReuseIdentifier: "OfertTableViewCell")
         viagensTableView.dataSource = self
         viagensTableView.delegate = self
         
@@ -29,20 +30,35 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sessaoDeViagens?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sessaoDeViagens?[section].numbersLines ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cellViagem = tableView.dequeueReusableCell(withIdentifier: "CellTableViewCell") as? CellTableViewCell else {
-            fatalError("erro to create Cell")
-        }
+      
         let viewModel = sessaoDeViagens?[indexPath.section]
         
         switch viewModel?.type {
         case .destaques:
+            guard let cellViagem = tableView.dequeueReusableCell(withIdentifier: "CellTableViewCell") as? CellTableViewCell else {
+                fatalError("erro to create Cell")
+            }
             cellViagem.configCell(viewModel?.viagens[indexPath.row])
             return cellViagem
+        case .ofertas:
+            
+            guard let ofertCell = tableView.dequeueReusableCell(withIdentifier: "OfertTableViewCell") as? OfertTableViewCell else {
+                fatalError("erro to create Cell")
+            }
+            ofertCell.configCell(viewModel?.viagens)
+            
+            return ofertCell
+            
         default:
             return UITableViewCell()
     
@@ -53,14 +69,20 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("HomeHeader", owner: self, options: nil)?.first as? HomeHeader
-        headerView?.viewConfig()
-        
-        return headerView
+        if section == 0 {
+            let headerView = Bundle.main.loadNibNamed("HomeHeader", owner: self, options: nil)?.first as? HomeHeader
+            headerView?.viewConfig()
+            
+            return headerView
+        }
+        return nil
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 300
+        if section == 0 {
+            return 300
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
